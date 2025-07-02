@@ -18,8 +18,8 @@ export default function HomePage() {
 
         <motion.div
           className="mt-10 z-10"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1.2 }}
         >
           <a

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,19 +24,19 @@ export default function Header() {
         </div>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex space-x-6 text-sm text-gray-200">
-          <a href="#" className="hover:text-white transition">
+        <nav className="hidden md:flex space-x-6 text-sm text-white">
+          <Link href="/" className="hover:text-gray-400 transition">
             Home
-          </a>
-          <a href="#features" className="hover:text-white transition">
+          </Link>
+          <Link href="/learn" className="hover:text-gray-400 transition">
             Learn
-          </a>
-          <a href="#features" className="hover:text-white transition">
+          </Link>
+          <Link href="/practice" className="hover:text-gray-400 transition">
             Practice
-          </a>
-          <a href="/login" className="hover:text-white transition">
+          </Link>
+          <Link href="/login" className="hover:text-gray-400 transition">
             Login
-          </a>
+          </Link>
         </nav>
 
         {/* Mobile Nav */}
@@ -95,27 +96,27 @@ export default function Header() {
             >
               <div className="h-full p-8 bg-gradient-to-b from-[#3a0d58]/60 via-[#1c0c3a]/50 to-[#0f172a]/60 backdrop-blur-2xl border-l border-white/10 shadow-xl rounded-l-3xl flex flex-col">
                 <nav className="flex flex-col space-y-6 pt-10 text-white text-lg font-medium">
-                  <a
-                    href="#"
+                  <Link
+                    href="/"
                     onClick={toggleMenu}
                     className="hover:text-pink-400 transition"
                   >
                     Home
-                  </a>
-                  <a
-                    href="#features"
+                  </Link>
+                  <Link
+                    href="/learn"
                     onClick={toggleMenu}
                     className="hover:text-pink-400 transition"
                   >
                     Learn
-                  </a>
-                  <a
-                    href="#features"
+                  </Link>
+                  <Link
+                    href="/practice"
                     onClick={toggleMenu}
                     className="hover:text-pink-400 transition"
                   >
                     Practice
-                  </a>
+                  </Link>
                 </nav>
               </div>
             </motion.div>

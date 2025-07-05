@@ -13,7 +13,7 @@ export default function HomePage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
         >
-          &quot; The best way to learn is the one tailored just for you.&quot;
+          The best way to learn is the one tailored just for you.
         </motion.h1>
 
         <motion.div
@@ -42,7 +42,7 @@ export default function HomePage() {
           <motion.div
             className="flex-1 max-w-sm bg-gradient-to-br from-[#4c1d95]/40 to-[#6b21a8]/30 border border-white/10 backdrop-blur-md rounded-3xl p-8 shadow-xl hover:scale-[1.015] hover:shadow-[0_0_1.5rem_#9333ea] transition duration-500 ease-in-out"
             whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0 }}
             transition={{ delay: 0.2, duration: 0.8, ease: "easeInOut" }}
           >
             <h3 className="text-2xl font-semibold mb-4 text-white">
@@ -60,7 +60,7 @@ export default function HomePage() {
           <motion.div
             className="flex-1 max-w-sm bg-gradient-to-br from-[#1e3a8a]/40 to-[#3b82f6]/30 border border-white/10 backdrop-blur-md rounded-3xl p-8 shadow-xl hover:scale-[1.015] hover:shadow-[0_0_1.5rem_#3b82f6] transition duration-500 ease-in-out"
             whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0 }}
             transition={{ delay: 0.4, duration: 0.8, ease: "easeInOut" }}
           >
             <h3 className="text-2xl font-semibold mb-4 text-white">
@@ -78,7 +78,7 @@ export default function HomePage() {
           <motion.div
             className="flex-1 max-w-sm bg-gradient-to-br from-[#0f766e]/40 to-[#0e7490]/30 border border-white/10 backdrop-blur-md rounded-3xl p-8 shadow-xl hover:scale-[1.015] hover:shadow-[0_0_1.5rem_#14b8a6] transition duration-500 ease-in-out"
             whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0 }}
             transition={{ delay: 0.6, duration: 0.8, ease: "easeInOut" }}
           >
             <h3 className="text-2xl font-semibold mb-4 text-white">

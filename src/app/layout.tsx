@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { inter } from "./ui/fonts";
-import Header from "./ui/Header";
-import BackgroundGradient from "./ui/BackgroundGradient";
+import { inter } from "../components/fonts";
+import Header from "../components/Header";
+import BackgroundGradient from "../components/BackgroundGradient";
 import "./globals.css";
+import ReduxProvider from "@/components/ReduxProvider";
 
 export const metadata: Metadata = {
   title: "Syntropic",
@@ -19,9 +20,11 @@ export default function RootLayout({
       <body
         className={`${inter.className} antialiased min-h-screen bg-[#0b0e29]  text-white scroll-smooth overflow-x-hidden relative`}
       >
-        <BackgroundGradient />
-        <Header />
-        {children}
+        <ReduxProvider>
+          <BackgroundGradient />
+          <Header />
+          {children}
+        </ReduxProvider>
       </body>
     </html>
   );

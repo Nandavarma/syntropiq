@@ -1,58 +1,19 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-type Path = {
-  id: string;
-  name: string;
-  description: string;
-};
-const pathData: Path[] = [
-  { id: "1", name: "Web development", description: "this is a good course." },
-  {
-    id: "2",
-    name: "Python development",
-    description: "this is a good python course.",
-  },
-  {
-    id: "3",
-    name: "Python development",
-    description: "this is a good python course.",
-  },
-  {
-    id: "4",
-    name: "Python development",
-    description: "this is a good python course.",
-  },
-  {
-    id: "5",
-    name: "Python development",
-    description: "this is a good python course.",
-  },
-  {
-    id: "6",
-    name: "Python development",
-    description: "this is a good python course.",
-  },
-  {
-    id: "7",
-    name: "Python development",
-    description: "this is a good python course.",
-  },
-  {
-    id: "8",
-    name: "Python development",
-    description: "this is a good python course.",
-  },
-];
+import { pathData } from "@/lib/data";
+import type { RootState, AppDispatch } from "@/store";
+import { useSelector, useDispatch } from "react-redux";
+import { setPath } from "@/store/slices/pathSlice";
 export default function LearnPage() {
-  const [pathList, setPathList] = useState<Path[]>([]);
+  const dispatch = useDispatch<AppDispatch>();
+  const pathList = useSelector((state: RootState) => state.path.paths);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setPathList(pathData);
-    }, 2000);
-    console.log("useeff");
-    return () => clearTimeout(timer);
-  }, []);
+    dispatch(setPath(pathData));
+    setLoading(false);
+  }, [dispatch]);
+  if (loading) return <h1>Loading.....</h1>;
   return (
     <div className="flex flex-col">
       <div className="w-full md:my-8 my-6">
@@ -63,7 +24,7 @@ export default function LearnPage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 m-auto">
         {pathList &&
           pathList.map((value) => (
-            <Link href={`/learn/path`} key={value.id}>
+            <Link href={`/learn/path/${value.id}`} key={value.id}>
               <div className="flex flex-col justify-between rounded-3xl p-6 h-64 w-full bg-white/10 border border-white/10 backdrop-blur-md shadow-lg hover:scale-[1.02] transition">
                 <div className="flex items-center justify-center h-1/2">
                   <h1 className="text-xl md:text-2xl font-bold text-center text-white">

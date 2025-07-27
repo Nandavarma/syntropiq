@@ -24,7 +24,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex space-x-6 text-sm text-white">
+        <nav className="hidden md:flex space-x-6 text-sm text-white font-semibold">
           <Link href="/" className="hover:text-gray-400 transition">
             Home
           </Link>

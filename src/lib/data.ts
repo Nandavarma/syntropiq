@@ -5,7 +5,12 @@ export interface Path {
 }
 
 export const pathData: Path[] = [
-  { id: "1", name: "Web development", description: "this is a good course." },
+  {
+    id: "1",
+    name: "NodeJS and Express",
+    description:
+      "Learn how to build web applications using NodeJS and Express.",
+  },
   {
     id: "2",
     name: "Python development",

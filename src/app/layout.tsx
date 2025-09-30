@@ -6,7 +6,7 @@ import "./globals.css";
 import ReduxProvider from "@/components/ReduxProvider";
 
 export const metadata: Metadata = {
-  title: "Syntropic",
+  title: "Syntropic - Personalized Learning",
   description: "A platform where learning becomes easy.",
 };
 

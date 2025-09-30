@@ -16,14 +16,11 @@ export default function Header() {
   }, [isOpen]);
 
   return (
-    <header className="relative z-30 mt-4 md:mx-8 mx-4 ">
-      {/* Top Bar */}
-      <div className="sticky top-0 rounded-4xl z-30 flex justify-between items-center px-6 md:px-9 py-4 md:py-3 bg-[#0b0e29]/90 backdrop-blur-2xl">
+    <header className="relative z-30 mt-4 md:mx-8">
+      <div className="sticky top-0 rounded-4xl z-30 flex justify-between items-center px-6 md:px-9 py-4 md:py-3 bg-[#0b0e29]/90 backdrop-blur-2xl mx-4">
         <Link href="/" className="text-2xl font-bold tracking-wide text-white">
           Syntropiq
         </Link>
-
-        {/* Desktop nav */}
         <nav className="hidden md:flex space-x-6 text-sm text-white font-semibold">
           <Link href="/" className="hover:text-gray-400 transition">
             Home
@@ -39,7 +36,7 @@ export default function Header() {
           </Link>
         </nav>
 
-        {/* Mobile Nav */}
+        {/* Mobile Navigation */}
         <div className="flex items-center gap-4 md:hidden">
           <Link
             href="/login"
@@ -48,7 +45,7 @@ export default function Header() {
             Login
           </Link>
 
-          {/* Hamburger */}
+          {/* Hamburger Menu */}
           <button
             onClick={toggleMenu}
             aria-label="Toggle Menu"
@@ -77,7 +74,6 @@ export default function Header() {
       <AnimatePresence>
         {isOpen && (
           <>
-            {/* Backdrop */}
             <motion.div
               className="absolute inset-0 z-40 bg-black/30 "
               initial={{ opacity: 0 }}
@@ -85,8 +81,6 @@ export default function Header() {
               exit={{ opacity: 0 }}
               onClick={toggleMenu}
             />
-
-            {/* Drawer */}
             <motion.div
               initial={{ x: "100%" }}
               animate={{ x: 0 }}

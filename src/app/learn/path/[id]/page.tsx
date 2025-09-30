@@ -13,8 +13,8 @@ export default function PathPage() {
   if (!path) return notFound();
 
   return (
-    <div>
-      <div className="relative mt-8 mx-4 md:mx-8 md:min-h-[500px] min-h-[200px] rounded-3xl overflow-hidden shadow-lg">
+    <div className="min-h-screen w-full pb-10">
+      <div className="relative mx-4 mt-8 min-h-[200px] rounded-3xl overflow-hidden shadow-lg md:mx-8 md:min-h-[500px]">
         <Image
           src="/images/goals-image.png"
           alt={path.name}
@@ -24,22 +24,20 @@ export default function PathPage() {
           className="object-cover"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
-
-        <div className="relative z-10 flex h-full flex-col justify-center p-6 md:w-3/5 text-white">
-          <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+        <div className="relative z-10 flex h-full flex-col justify-center m-6 p-6 rounded-2xl text-white md:w-2/5 bg-gradient-to-r from-black/70 via-black/60 to-black/40">
+          <h1 className="text-2xl font-bold leading-tight md:text-4xl">
             {path.name}
           </h1>
-          <p className="mt-3 hidden md:block md:text-lg text-gray-300 max-w-prose">
+          <p className="mt-3 hidden max-w-prose text-gray-300 md:block md:text-lg">
             {path.description}
           </p>
-          <h4 className="font-bold text-xl pt-3 pb-1">
+          <h4 className="pt-3 pb-1 text-xl font-bold">
             Prerequisites : Javascript, RESTful API
           </h4>
         </div>
       </div>
-      <div className="w-full md:my-8 my-10">
-        <h1 className="text-center text-3xl md:text-4xl font-bold text-wrap max-w-prose">
+      <div className="my-10 w-full md:my-8">
+        <h1 className="mx-auto max-w-fit text-center text-3xl font-bold md:text-4xl">
           Small Steps, Big Gains
         </h1>
       </div>

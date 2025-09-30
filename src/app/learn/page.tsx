@@ -25,7 +25,7 @@ export default function LearnPage() {
           Choose your path. Explore with ease.
         </h1>
       </div>
-      <div className="grid w-full max-w-7xl grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 px-4">
+      <div className="grid w-full max-w-7xl grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 px-6 mb-5">
         {pathList?.map((value) => (
           <Link href={`/learn/path/${value.id}`} key={value.id}>
             <div className="flex flex-col justify-between rounded-3xl p-6 h-64 bg-white/10 border border-white/10 backdrop-blur-md shadow-lg hover:scale-[1.02] transition">

@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 export default function HomePage() {
   return (
     <div className="min-h-screen text-white scroll-smooth font-sans">
-      {/* Hero Section */}
       <section className="flex flex-col items-center justify-center text-center h-[85vh] px-6">
         <motion.h1
           className="text-4xl md:text-5xl font-bold max-w-3xl text-white drop-shadow-[0_0_0.75rem_#c084fc]"
@@ -31,14 +30,12 @@ export default function HomePage() {
         </motion.div>
       </section>
 
-      {/* Features Section */}
       <section id="features" className="py-28 px-6 md:px-20">
         <h2 className="text-4xl font-bold text-center mb-20 text-white drop-shadow-[0_0_0.5rem_#8b5cf6]">
           Why Choose Syntropiq?
         </h2>
 
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-stretch gap-10">
-          {/* Feature 1 */}
           <motion.div
             className="flex-1 max-w-sm bg-gradient-to-br from-[#4c1d95]/40 to-[#6b21a8]/30 border border-white/10 backdrop-blur-md rounded-3xl p-8 shadow-xl hover:scale-[1.015] hover:shadow-[0_0_1.5rem_#9333ea] transition duration-500 ease-in-out"
             whileInView={{ opacity: 1, y: 0 }}
@@ -56,7 +53,6 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          {/* Feature 2 */}
           <motion.div
             className="flex-1 max-w-sm bg-gradient-to-br from-[#1e3a8a]/40 to-[#3b82f6]/30 border border-white/10 backdrop-blur-md rounded-3xl p-8 shadow-xl hover:scale-[1.015] hover:shadow-[0_0_1.5rem_#3b82f6] transition duration-500 ease-in-out"
             whileInView={{ opacity: 1, y: 0 }}
@@ -74,7 +70,6 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          {/* Feature 3 */}
           <motion.div
             className="flex-1 max-w-sm bg-gradient-to-br from-[#0f766e]/40 to-[#0e7490]/30 border border-white/10 backdrop-blur-md rounded-3xl p-8 shadow-xl hover:scale-[1.015] hover:shadow-[0_0_1.5rem_#14b8a6] transition duration-500 ease-in-out"
             whileInView={{ opacity: 1, y: 0 }}

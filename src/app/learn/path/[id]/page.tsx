@@ -41,6 +41,7 @@ export default function PathPage() {
           Small Steps, Big Gains
         </h1>
       </div>
+      <div className="mx-auto max-w-4xl"></div>
     </div>
   );
 }
